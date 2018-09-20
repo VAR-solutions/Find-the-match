@@ -1,4 +1,4 @@
-# The Find the Match Game
+# The Find-the-Match Game
 
 ### Structure of Game
 
