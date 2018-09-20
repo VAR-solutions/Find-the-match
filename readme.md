@@ -2,7 +2,7 @@
 
 ### Structure of Game
 
-The game comprises of a 4 x 4 matrix that have some color. There will be pairs of each color, i.e, there will be eight colors(_random_) only. Also, the positions of the same colors will be random, but fixed for same game. Your Goal will be score Maximum Score(_not Negative_). As the score goes negative, you loose.
+The game comprises of a 4 x 4 matrix that have some color. There will be pairs of each color, i.e, there will be eight colors(_random_) only. Also, the positions of the same colors will be random, but fixed for same game. Your Goal will be to score Maximum(_not Negative_). As the score goes negative, you loose.
 
 ### The Game is played as follows:
 
