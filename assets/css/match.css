@@ -2,12 +2,12 @@
 	margin: 0 auto;
 	max-width: 1000px;
 }
-.tile{
-	width: 25%;
+.thumbnail{
+	/*width: 25%;*/
 	background-color: rgb(255, 165, 0);
 	padding-bottom: 30%;
-	float: left;
-	margin: 1.66%;
+	/*float: left;*/
+	margin: 5px;
 }
 body{
 	background: black;
