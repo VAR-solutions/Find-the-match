@@ -1,13 +1,24 @@
 #container{
-	margin: 0 auto;
-	max-width: 1000px;
+	margin: 0 auto
+	max-width: 700px;
 }
 .thumbnail{
 	/*width: 25%;*/
 	background-color: rgb(255, 165, 0);
-	padding-bottom: 30%;
+	padding-bottom: auto;
 	/*float: left;*/
-	margin: 5px;
+
+	height: 150px;
+	width: 100%;
+}
+.col-lg-3 .col-md-3 .col-sm-3{
+	width: 25%;
+}
+.redux{
+    height:600px;
+		width:75%;
+		align-content: center;
+		padding : 50px auto;
 }
 body{
 	background: #acb6e5;  /* fallback for old browsers */
