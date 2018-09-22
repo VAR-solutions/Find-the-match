@@ -1,4 +1,5 @@
 var tiles = document.querySelectorAll(".thumbnail");
+var scoreDisplay = document.querySelector("#score");
 tiles.forEach(function (i) {
 	i.style.background = "black";
 });
@@ -18,9 +19,11 @@ function ind() {
 function driver() {
 	// check(0, 3);
 	colors = generateRandColors(8);
+	score = 25;
 	for (var i = 0; i < tiles.length; i++) {
 		tiles[i].addEventListener("click", function () {
 			console.log("you clicked the tile");
+			scoreDisplay.textContent = score;
 			var clickedcolor = this.style.background;
 			if(this.style.border === "")
 			{
@@ -41,7 +44,7 @@ function driver() {
                             tiles[i].style.zIndex = "";
                             tiles[j].blur = "";
                             tiles[j].style.zIndex = "";
-                            score = score+10;
+                            score = score+25;
                         }
                         else {
                             tiles[i].style.background = "black";
@@ -54,6 +57,7 @@ function driver() {
                             tiles[j].style.border = "";
                             score = score - 5
                         }
+												scoreDisplay.textContent = score;
 					},250);
                     count = 0;
                 }
