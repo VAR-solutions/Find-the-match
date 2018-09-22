@@ -54,7 +54,7 @@ function driver() {
                             tiles[j].style.border = "";
                             score = score - 5
                         }
-					},1000);
+					},250);
                     count = 0;
                 }
 			}
