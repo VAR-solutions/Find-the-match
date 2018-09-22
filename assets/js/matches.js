@@ -2,9 +2,19 @@ var tiles = document.querySelectorAll(".thumbnail");
 tiles.forEach(function (i) {
 	i.style.background = "black";
 });
-score = 0;
+var score = 0;
+var count = 0;
+var flag = 0;
 var colors = [];
 driver();
+function ind() {
+	for(i=0;i<15;i++){
+		if(tiles[i].style.border === "2px solid black" & tiles[i].style.zIndex != "2"){
+			tiles[i].style.zIndex = "2";
+			return i;
+		}
+	}
+}
 function driver() {
 	// check(0, 3);
 	colors = generateRandColors(8);
@@ -14,13 +24,19 @@ function driver() {
 			var clickedcolor = this.style.background;
 			this.style.border = "2px solid black";
 			if (clickedcolor === "black") {
-
-				 this.style.background = col();
-
+				count += 1;
+				this.style.background = col();
+                if(count==2){
+                    var i = ind();
+                    var j = ind();
+                    check(i,j);
+                    count = 0;
+                }
 			}
 
 		});
 	}
+
 }
 
 function col(){
