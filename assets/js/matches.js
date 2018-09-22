@@ -12,12 +12,26 @@ function driver() {
 		tiles[i].addEventListener("click", function () {
 			console.log("you clicked the tile");
 			var clickedcolor = this.style.background;
+			this.style.border = "2px solid black";
 			if (clickedcolor === "rgb(255, 165, 0)") {
-				console.log("came through");
-				this.style.background = colors[0];
+
+				 this.style.background = col();
+
 			}
+
 		});
 	}
+}
+
+function col(){
+	for(var i=0;i<16;i++)
+	{
+		if(tiles[i].style.border === "2px solid black")
+		{
+			return colors[i];
+		}
+	}
+	return "black";
 }
 function check(i, j) {
 	if (tiles[i].style.background === tiles[j].style.background) {
