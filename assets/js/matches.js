@@ -22,7 +22,9 @@ function driver() {
 		tiles[i].addEventListener("click", function () {
 			console.log("you clicked the tile");
 			var clickedcolor = this.style.background;
-			this.style.border = "2px solid black";
+			if(this.style.border === "")
+			{
+			this.style.border = "2px solid black"; }
 			if (clickedcolor === "black") {
 				count += 1;
 				this.style.background = col();
@@ -56,6 +58,7 @@ function driver() {
                     count = 0;
                 }
 			}
+
 
 		});
 	}
