@@ -8,9 +8,9 @@ var flag = 0;
 var colors = [];
 driver();
 function ind() {
-	for(i=0;i<15;i++){
-		if(tiles[i].style.border === "2px solid black" & tiles[i].style.zIndex != "2"){
-			tiles[i].style.zIndex = "2";
+	for(i=0;i<16;i++){
+		if(tiles[i].style.border === "2px solid black" & tiles[i].blur!= "2"){
+			tiles[i].blur = "2";
 			return i;
 		}
 	}
@@ -29,7 +29,30 @@ function driver() {
                 if(count==2){
                     var i = ind();
                     var j = ind();
-                    check(i,j);
+                    setTimeout(function(){
+                        if (tiles[i].style.background === tiles[j].style.background) {
+                            tiles[i].style.background = "rgba(255, 255, 255, 0)";
+                            tiles[j].style.background = "rgba(255, 255, 255, 0)";
+                            tiles[i].style.border = "1px solid rgba(255, 255, 255, 0)";
+                            tiles[j].style.border = "1px solid rgba(255, 255, 255, 0)";
+                            tiles[i].blur = "";
+                            tiles[i].style.zIndex = "";
+                            tiles[j].blur = "";
+                            tiles[j].style.zIndex = "";
+                            score = score+10;
+                        }
+                        else {
+                            tiles[i].style.background = "black";
+                            tiles[j].style.background = "black";
+                            tiles[i].blur = "";
+                            tiles[i].style.zIndex = "";
+                            tiles[j].blur = "";
+                            tiles[j].style.zIndex = "";
+                            tiles[i].style.border = ""
+                            tiles[j].style.border = "";
+                            score = score - 5
+                        }
+					},1000);
                     count = 0;
                 }
 			}
@@ -50,24 +73,34 @@ function col(){
 	}
 	return "black";
 }
-function check(i, j) {
-	if (tiles[i].style.background === tiles[j].style.background) {
-		tiles[i].style.background = "rgba(255, 255, 255, 0)";
-		tiles[j].style.background = "rgba(255, 255, 255, 0)";
-		tiles[i].style.border = "1px solid rgba(255, 255, 255, 0)";
-		tiles[j].style.border = "1px solid rgba(255, 255, 255, 0)";
-		score = score+10;
-	}
-	else {
-		tiles[i].style.background = "black";
-		tiles[j].style.background = "black";
-		score = score - 5
-	}
-}
-
-function reset() {
-
-}
+// function check(i, j) {
+// 	if (tiles[i].style.background === tiles[j].style.background) {
+// 		tiles[i].style.background = "rgba(255, 255, 255, 0)";
+// 		tiles[j].style.background = "rgba(255, 255, 255, 0)";
+// 		tiles[i].style.border = "1px solid rgba(255, 255, 255, 0)";
+// 		tiles[j].style.border = "1px solid rgba(255, 255, 255, 0)";
+//         tiles[i].blur = "";
+//         tiles[i].style.zIndex = "";
+//         tiles[j].blur = "";
+//         tiles[j].style.zIndex = "";
+// 		score = score+10;
+// 	}
+// 	else {
+// 		tiles[i].style.background = "black";
+// 		tiles[j].style.background = "black";
+// 		tiles[i].blur = "";
+// 		tiles[i].style.zIndex = "";
+//         tiles[j].blur = "";
+//         tiles[j].style.zIndex = "";
+//         tiles[i].style.border = ""
+//         tiles[j].style.border = "";
+// 		score = score - 5;
+// 	}
+// }
+//
+// function reset() {
+//
+// }
 function randomColor() {
 	//pick r, g, b from 0 - 255
 	var r = Math.floor(Math.random() * 256);
