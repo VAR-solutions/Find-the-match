@@ -1,6 +1,6 @@
 var tiles = document.querySelectorAll(".thumbnail");
 tiles.forEach(function (i) {
-	i.style.background = "rgb(255,165,0)";
+	i.style.background = "black";
 });
 score = 0;
 var colors = [];
@@ -13,7 +13,7 @@ function driver() {
 			console.log("you clicked the tile");
 			var clickedcolor = this.style.background;
 			this.style.border = "2px solid black";
-			if (clickedcolor === "rgb(255, 165, 0)") {
+			if (clickedcolor === "black") {
 
 				 this.style.background = col();
 
@@ -26,8 +26,9 @@ function driver() {
 function col(){
 	for(var i=0;i<16;i++)
 	{
-		if(tiles[i].style.border === "2px solid black")
+		if(tiles[i].style.border === "2px solid black" && tiles[i].style.zIndex != "1")
 		{
+			tiles[i].style.zIndex = "1";
 			return colors[i];
 		}
 	}
@@ -42,8 +43,8 @@ function check(i, j) {
 		score = score+10;
 	}
 	else {
-		tiles[i].style.background = "rgb(255,165,0)";
-		tiles[j].style.background = "rgb(255,165,0)";
+		tiles[i].style.background = "black";
+		tiles[j].style.background = "black";
 		score = score - 5
 	}
 }
@@ -72,5 +73,11 @@ function generateRandColors(num) {
 		arr.push(arr[uniques[i]]);
 	}
 	//return that array
-	return arr;
+	var as = [];
+	var uniques = chance.unique(chance.natural, 16, {min: 0, max: 15});
+	for (var i = 0; i < 16; i++) {
+   	as.push(arr[uniques[i]]);
+
+	}
+	return as;
 }
