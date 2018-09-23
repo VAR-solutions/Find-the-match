@@ -9,3 +9,10 @@ The game comprises of a 4 x 4 matrix that have some color. There will be pairs o
 	1. Click on a tile to reveal its color
 	2. Guess the tile with same color, if right, marks increase, else decrease.
 	3. The game is played till all colors are revealed OR the score becomes negative.
+
+
+
+
+Idea credits: [Ananya Tewari](https://github.com/antew-iiitv)
+
+Team: [Vishal](https://github.com/i-vishi), [Ananya](https://github.com/antew-iiitv), [Ravi](https://github.com/ravivarshney01) 
