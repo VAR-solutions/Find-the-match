@@ -12,7 +12,6 @@ tiles.forEach(function (i) {
 driver();
 
 function driver() {
-	// check(0, 3);
 	colors = generateRandColors(8);
 	score = 25;
 	for (var i = 0; i < tiles.length; i++) {
