@@ -1,5 +1,6 @@
 var tiles = document.querySelectorAll(".thumbnail");
 var scoreDisplay = document.querySelector("#score");
+
 tiles.forEach(function (i) {
 	i.style.background = "black";
 });
