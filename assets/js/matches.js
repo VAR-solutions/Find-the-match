@@ -13,7 +13,7 @@ driver();
 
 function driver() {
 	colors = generateRandColors(8);
-	score = 25;
+	score = 0;
 	count1 = 0;
 	for (var i = 0; i < tiles.length; i++) {
 		tiles[i].addEventListener("click", function () {
