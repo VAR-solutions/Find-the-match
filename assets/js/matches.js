@@ -50,7 +50,7 @@ function driver() {
 							tiles[j].style.zIndex = "";
 							tiles[i].style.border = ""
 							tiles[j].style.border = "";
-							score = score - 5
+							score = score - 5;
 						}
 						scoreDisplay.textContent = score;
 						if(count1===8){
