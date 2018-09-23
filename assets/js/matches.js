@@ -14,20 +14,21 @@ driver();
 function driver() {
 	colors = generateRandColors(8);
 	score = 25;
+	count1 = 0;
 	for (var i = 0; i < tiles.length; i++) {
 		tiles[i].addEventListener("click", function () {
 			scoreDisplay.textContent = score;
 			var clickedcolor = this.style.background;
-			if(this.style.border === ""){
+			if (this.style.border === "") {
 				this.style.border = "2px solid black";
 			}
 			if (clickedcolor === "black") {
 				count += 1;
 				this.style.background = col();
-				if(count==2){
+				if (count == 2) {
 					var i = ind();
 					var j = ind();
-					setTimeout(function(){
+					setTimeout(function () {
 						if (tiles[i].style.background === tiles[j].style.background) {
 							tiles[i].style.background = "rgba(255, 255, 255, 0)";
 							tiles[j].style.background = "rgba(255, 255, 255, 0)";
@@ -37,7 +38,8 @@ function driver() {
 							tiles[i].style.zIndex = "";
 							tiles[j].blur = "";
 							tiles[j].style.zIndex = "";
-							score = score+25;
+							score = score + 25;
+							count1++;
 						}
 						else {
 							tiles[i].style.background = "black";
@@ -51,33 +53,45 @@ function driver() {
 							score = score - 5
 						}
 						scoreDisplay.textContent = score;
-					},250);
+						if(count1===8){
+							console.log("win");
+						}
+					}, 250);
 					count = 0;
 				}
 			}
 		});
 	}
+
 }
 
 function ind() {
-	for(i=0;i<16;i++){
-		if(tiles[i].style.border === "2px solid black" & tiles[i].blur!= "2"){
+	for (i = 0; i < 16; i++) {
+		if (tiles[i].style.border === "2px solid black" & tiles[i].blur != "2") {
 			tiles[i].blur = "2";
 			return i;
 		}
 	}
 }
 
-function col(){
-	for(var i=0;i<16;i++)
-	{
-		if(tiles[i].style.border === "2px solid black" && tiles[i].style.zIndex != "1")
-		{
+function col() {
+	for (var i = 0; i < 16; i++) {
+		if (tiles[i].style.border === "2px solid black" && tiles[i].style.zIndex != "1") {
 			tiles[i].style.zIndex = "1";
 			return colors[i];
 		}
 	}
 	return "black";
+}
+
+function win() {
+	flag = 0;
+	for (i = 0; i < 16; i++) {
+		if (tiles[i].style.background != "rgba(255, 255, 255, 0)") {
+			flag = 1;
+		}
+	}
+	return flag;
 }
 
 // make array of random colors
@@ -89,13 +103,13 @@ function generateRandColors(num) {
 		//get random numbers and push it in array
 		arr.push(randomColor());
 	}
-	var uniques = chance.unique(chance.natural, 8, {min: 0, max: 7});
-	for(i=0;i<8;i++){
+	var uniques = chance.unique(chance.natural, 8, { min: 0, max: 7 });
+	for (i = 0; i < 8; i++) {
 		arr.push(arr[uniques[i]]);
 	}
 	//return that array
 	var as = [];
-	var uniques = chance.unique(chance.natural, 16, {min: 0, max: 15});
+	var uniques = chance.unique(chance.natural, 16, { min: 0, max: 15 });
 	for (var i = 0; i < 16; i++) {
 		as.push(arr[uniques[i]]);
 
