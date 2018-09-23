@@ -4,6 +4,7 @@ var flag = 0;
 var colors = [];
 var tiles = document.querySelectorAll(".thumbnail");
 var scoreDisplay = document.querySelector("#score");
+var finScore = document.querySelector("#final");
 
 tiles.forEach(function (i) {
 	i.style.background = "black";
@@ -55,6 +56,9 @@ function driver() {
 						scoreDisplay.textContent = score;
 						if(count1===8){
 							console.log("win");
+							finScore.textContent = score;
+							console.log(score);
+							$("#congrat").modal();
 						}
 					}, 250);
 					count = 0;
