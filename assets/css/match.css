@@ -260,3 +260,9 @@ html {
         }
     }
 }
+.dev:link{
+    text-decoration: none;
+}
+.dev:hover{
+    text-decoration: none;
+}
