@@ -196,40 +196,31 @@ $btn-shadow--success: rgba(0,208,0,.5);
 html {
     box-sizing: border-box;
     height: 100%;
+    box-sizing: inherit;
+}
 
-    *,
-    *:before
-    *:after {
-        // Paul Irish technique
-        box-sizing: inherit;
-    }
-}
-body {
-    font-family: "Proxima Nova Soft Semibold", "Proxima Nova", 'Helvetica Neue', Helvetica, Arial;
-}
-body,
-.wrapper {
+/* body, .wrapper {
     min-height: 100vh;
-}
+} */
 
 /* Modal
 ====================== */
-.wrapper {
+/* .wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
     background: url(https://dl.dropboxusercontent.com/s/v3m6p0p5kq6xzkz/100daysui_100bg.png) no-repeat, #303540;
     background-size: cover;
-}
+} */
 .modal {
-    width: 100%;
-    max-width: 530px;
-    margin: 20px;
-    overflow: hidden;
+    top: 30px;
+		bottom: 30px;
+		left: 250px;
+		right: 250px;
     box-shadow: 0 60px 80px 0 rgba(0,0,0,.4);
 }
 .modal-top {
-    padding: 30px 30px 20px;
+    padding: 30px 30px 30px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     background: rgba(251,251,251,1);
@@ -241,7 +232,7 @@ body,
 }
 .modal-header {
     margin-bottom: 10px;
-    font-size: 25.5px;
+    font-size: 25px;
     letter-spacing: 2px;
     text-align: center;
 }
@@ -250,30 +241,27 @@ body,
     margin: 0 auto;
     font-size: 19px;
     line-height: 1.3;
-    letter-spacing: 1.25px;
+    letter-spacing: 1px;
     text-align: center;
     color: #999;
 }
 .modal-bottom {
     display: flex;
     flex-wrap: wrap;
-    padding: 15px 55px;
+    padding: 10px 20px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     background: #fff;
 }
 .modal-btn {
-    margin: 10px auto;
+    margin: 60px auto;
 }
 
 /* Media Queries */
 @media (min-width: 456px) {
 
-    .modal-top {
-        padding: 69px 0 65px;
-    }
     .modal-bottom {
-        padding: 30px 60px;
+        padding: 20px auto;
     }
     .modal-btn {
         flex: 1;

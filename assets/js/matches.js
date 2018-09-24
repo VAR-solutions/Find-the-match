@@ -15,10 +15,10 @@ driver();
 function driver() {
 	colors = generateRandColors(8);
 	score = 0;
+	scoreDisplay.textContent = "000";
 	count1 = 0;
 	for (var i = 0; i < tiles.length; i++) {
 		tiles[i].addEventListener("click", function () {
-			scoreDisplay.textContent = score;
 			var clickedcolor = this.style.background;
 			if (this.style.border === "") {
 				this.style.border = "2px solid black";
