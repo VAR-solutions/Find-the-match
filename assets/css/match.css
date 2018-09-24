@@ -157,6 +157,13 @@ a:visited{
 					height: 120px;
 					border-radius: 50%;
 }
+#sidelove{
+	color: white;
+	float: right;
+	padding-top: 15px;
+font-size: 10px;
+padding-bottom: 8px;
+}
 #devi{
 	height: 250px;
 }

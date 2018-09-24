@@ -29,10 +29,12 @@
     <p><span id="score">000</span></p>
     <br>
     <br>
-    <!-- Body of Game -->
     <button class="button" onclick="init()"><span>Reset</span></a></button>
+    <ul class="nav navbar-nav navbar-fixed-bottom">
+      <li id = "sidelove">Made With &#10084; By VAR Solutions</li>
+    </ul>
   </div>
-
+<!-- Body of Game -->
   <div class="container">
     <div class="redux">
       <div class="row">
@@ -130,6 +132,7 @@
           </div>
         </div>
       </div>
+      <!-- Developers Modal -->
       <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModal"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -162,6 +165,7 @@
         </div>
       </div>
     </div>
+    <!-- Congratulations Modal -->
     <div class="modal modal--congratulations" id="congrat" aria-hidden="true" role="dialog">
       <div class="modal-top">
         <img class="modal-icon u-imgResponsive" src="https://dl.dropboxusercontent.com/s/e1t2hhowjcrs7f5/100daysui_100icon.png"
@@ -173,7 +177,7 @@
       </div>
       <div class="modal-bottom">
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary"><a href = "index.html">Play Again</a></button>
+          <button type="button" class="btn btn-secondary" onclick="init()" data-dismiss="modal">Play Again</button>
 
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 
