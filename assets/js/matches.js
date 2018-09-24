@@ -54,7 +54,7 @@ function driver() {
 							score = score - 5;
 						}
 						scoreDisplay.textContent = score;
-						if(count1===8){
+						if (count1 === 8) {
 							// console.log("win");
 							finScore.textContent = score;
 							// console.log(score);
@@ -129,15 +129,15 @@ function randomColor() {
 	var b = Math.floor(Math.random() * 256);
 	return "rgb(" + r + ", " + g + ", " + b + ")";
 }
-function init(){
+function init() {
 	score = 0;
 	count = 0;
 	count1 = 0;
-	for(i=0;i<16;i++){
+	for (i = 0; i < 16; i++) {
 		tiles[i].style.background = "black";
 		tiles[i].style.cssText = "background: black;";
 		// tiles[i].style.backgroundColor = "black";
-		tiles[i].style.border="";
+		tiles[i].style.border = "";
 
 	}
 	driver();
