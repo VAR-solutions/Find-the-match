@@ -199,19 +199,8 @@ html {
     box-sizing: inherit;
 }
 
-/* body, .wrapper {
-    min-height: 100vh;
-} */
-
 /* Modal
 ====================== */
-/* .wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: url(https://dl.dropboxusercontent.com/s/v3m6p0p5kq6xzkz/100daysui_100bg.png) no-repeat, #303540;
-    background-size: cover;
-} */
 .modal {
     top: 30px;
 		bottom: 30px;
@@ -256,8 +245,6 @@ html {
 .modal-btn {
     margin: 60px auto;
 }
-
-/* Media Queries */
 @media (min-width: 456px) {
 
     .modal-bottom {
