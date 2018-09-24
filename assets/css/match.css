@@ -152,14 +152,48 @@ a:visited{
   opacity: 1;
   right: 0;
 }
+.pics{
+          width: 120px;
+					height: 120px;
+					border-radius: 50%;
+}
+#devi{
+	height: 250px;
+}
+#deviName{
+	padding-left: 15px;
+	padding-top: 100px;
+
+}
+
+#deviName a:link{
+	color: black;
+
+}
+#deviName a:visited{
+ color: black;
+}
+#love{
+	padding-top: 15px;
+text-align: center;
+}
+#love a:link{
+	color: black;
+
+}
+#love a:visited{
+	color: black;
+}
+
+
 
 // Mixins/Vars
 // ======================
 $btn-color--primary: rgba(41, 118, 223, 1);
-$btn-shadow: rgba(41, 118, 223, .5);
+$btn-shadow: rgba(41, 118, 223, 0.5);
 $btn-shine: linear-gradient(to top, rgba(255,255,255,0) 0%, rgba(250,198,100,.27) 100%);
 $btn-color--success: rgba(0,208,0,1);
-$btn-shadow--success: rgba(0,208,0,.5);
+$btn-shadow--success: rgba(0,208,0,0.5);
 
 @mixin btn-shadow($color) {
     box-shadow: 0 15px 40px 0 $color;
