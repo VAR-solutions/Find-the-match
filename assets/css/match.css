@@ -184,6 +184,12 @@ text-align: center;
 #love a:visited{
 	color: black;
 }
+#congoBut{
+	text-align: center;
+}
+#congClose{
+	float:right;
+}
 
 
 
