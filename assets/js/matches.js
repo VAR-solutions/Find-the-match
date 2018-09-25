@@ -129,6 +129,7 @@ function randomColor() {
 	var b = Math.floor(Math.random() * 256);
 	return "rgb(" + r + ", " + g + ", " + b + ")";
 }
+// init function
 function init() {
 	score = 0;
 	count = 0;
