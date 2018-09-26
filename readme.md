@@ -13,6 +13,6 @@ The game comprises of a 4 x 4 matrix that have some color. There will be pairs o
 
 
 
-Idea credits: [Ananya Tewari](https://github.com/antew-iiitv)
+Idea credits: [Ananya Tewari](https://github.com/antew7)
 
-Team: [Vishal](https://github.com/i-vishi), [Ananya](https://github.com/antew-iiitv), [Ravi](https://github.com/ravivarshney01) 
+Team: [Vishal](https://github.com/i-vishi), [Ananya](https://github.com/antew7), [Ravi](https://github.com/ravivarshney01) 
