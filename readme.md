@@ -12,6 +12,8 @@ The game comprises of a 4 x 4 matrix that have some color. There will be pairs o
 
 
 
+### Click on this [link](https://bit.ly/2OThE6Y) to play Game.
+
 
 Idea credits: [Ananya Tewari](https://github.com/antew7)
 
