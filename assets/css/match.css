@@ -82,12 +82,6 @@ body{
 	width: 100%;
 }
 
-@media (max-width: 800px) {
-	.thumbnail {
-		height: 150px;
-	}
-}
-
 .col-lg-3 .col-md-3 .col-sm-3{
 	width: 25%;
 }
@@ -298,12 +292,8 @@ html {
 .modal-btn {
     margin: 60px auto;
 }
-
-/*****************/
-/* Media Queries */
-/*****************/
-
 @media (min-width: 456px) {
+
     .modal-bottom {
         padding: 20px auto;
     }
@@ -317,28 +307,9 @@ html {
         }
     }
 }
-
-@media (max-width: 1150px) {
-	#left-side-bar {
-		padding: 25px;
-	}
-	#left-bar-links {
-		margin-left: 350px;
-	}
-	#right-side-bar {
-		text-align: center;
-		padding: 50px;
-	}
-	#game-body {
-		padding-top: 25%;
-
-	}
-}
-
 .dev:link{
     text-decoration: none;
 }
-
 .dev:hover{
     text-decoration: none;
 }
