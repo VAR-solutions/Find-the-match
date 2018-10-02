@@ -143,34 +143,3 @@ function init() {
 	}
 	driver();
 }
-
-// Change nav positions on window re-size for mobile friendliness
-if ($(window).width() < 1150) {
-	switch_ui('mobile');
-} else {
-		switch_ui('desktop');
-}
-
-$(window).resize(function() {
-	if ($(window).width() < 1150) {
-		switch_ui('mobile');
-	} else {
-			switch_ui('desktop');
-	}
-});
-
-function switch_ui(width) {
-	if (width == 'mobile') {
-		$('#left-side-bar').removeClass('navbar-fixed-left');
-		$('#left-side-bar').addClass('navbar-fixed-top');
-		$('#left-bar-links').removeClass('navbar-fixed-bottom');
-		$('#right-side-bar').removeClass('navbar-fixed-right');
-		$('#right-side-bar').addClass('navbar-fixed-bottom');
-	} else if (width == 'desktop') {
-			$('#left-side-bar').removeClass('navbar-fixed-top');
-			$('#left-side-bar').addClass('navbar-fixed-left');
-			$('#left-bar-links').addClass('navbar-fixed-bottom');
-			$('#right-side-bar').removeClass('navbar-fixed-bottom');
-			$('#right-side-bar').addClass('navbar-fixed-right');
-	}
-}
