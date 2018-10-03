@@ -3,6 +3,7 @@
 
 <head>
   <title>FIND THE MATCH</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
@@ -12,179 +13,180 @@
 </head>
 
 <body>
-  <!-- Left Side-bar -->
-  <div class="navbar navbar-inverse navbar-fixed-left">
-    <a class="navbar-brand" href="#">Find The Match</a>
-    <ul class="nav navbar-nav navbar-fixed-bottom">
-      <li><a href="#" data-toggle="modal" data-target="#exampleModalCenter">How to play?</a></li>
-      <li><a href="#" data-toggle="modal" data-target="#exampleModal">Developers</a></li>
-      <br>
-    </ul>
-  </div>
-  <!-- Right Side-bar -->
-  <div class="navbar navbar-inverse navbar-fixed-right">
-    <p class="score-board">Score Board</p>
-    <br>
-    <br>
-    <p><span id="score">000</span></p>
-    <br>
-    <br>
-    <button class="button" onclick="init()"><span>Reset</span></a></button>
-    <ul class="nav navbar-nav navbar-fixed-bottom">
-      <li id = "sidelove">Made With &#10084; By VAR Solutions</li>
-    </ul>
-  </div>
-<!-- Body of Game -->
-  <div class="container">
-    <div class="redux">
-      <div class="row">
-        <div class="col-lg-3 col-md-3 col-sm-3">
-          <div class="thumbnail">
+  <div class="app-container">
+    <!-- Left Side-bar -->
+    <div class="navbar left-nav">
+      <a class="navbar-brand" href="#">Find The Match</a>
+      <ul class="nav navbar-nav bottom-content">
+        <li class="n"><a href="#" data-toggle="modal" data-target="#exampleModalCenter">How to play?</a></li>
+        <li class="mobile-hidden"><a  href="#" data-toggle="modal" data-target="#exampleModal">Developers</a></li>
+        <br>
+      </ul>
+    </div>
+    <!-- Body of Game -->
+    <div class="container">
+        <div class="game-grid">
+          <div class="game-tile">
+            <div class="thumbnail">
+            </div>
+          </div>
+          <div class="game-tile">
+            <div class="thumbnail">
+            </div>
+          </div>
+          <div class="game-tile">
+            <div class="thumbnail">
+            </div>
+          </div>
+          <div class="game-tile">
+            <div class="thumbnail">
+            </div>
+          </div>
+          <div class="game-tile">
+            <div class="thumbnail">
+            </div>
+          </div>
+          <div class="game-tile">
+            <div class="thumbnail">
+            </div>
+          </div>
+          <div class="game-tile">
+            <div class="thumbnail">
+            </div>
+          </div>
+          <div class="game-tile">
+            <div class="thumbnail">
+            </div>
+          </div>
+          <div class="game-tile">
+            <div class="thumbnail">
+            </div>
+          </div>
+          <div class="game-tile">
+            <div class="thumbnail">
+            </div>
+          </div>
+          <div class="game-tile">
+            <div class="thumbnail">
+            </div>
+          </div>
+          <div class="game-tile">
+            <div class="thumbnail">
+            </div>
+          </div>
+          <div class="game-tile">
+            <div class="thumbnail">
+            </div>
+          </div>
+          <div class="game-tile">
+            <div class="thumbnail">
+            </div>
+          </div>
+          <div class="game-tile">
+            <div class="thumbnail">
+            </div>
+          </div>
+          <div class="game-tile">
+            <div class="thumbnail">
           </div>
         </div>
-        <div class="col-lg-3 col-md-3 col-sm-3">
-          <div class="thumbnail">
+        <!-- How to play?  Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2 class="modal-title" id="exampleModalLongTitle">How to play?
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button></h5>
+              </div>
+              <div class="modal-body">
+                <br>
+                1. Click on a tile to reveal its color.<br>
+                2. Guess the tile with same color.<br>
+                a. If right, marks increase by 25.<br>
+                b. If wrong, marks decrease by 5.<br>
+                3. The game is played till all colors are revealed.<br>
+                <br>
+                <br>
+                Note: 1. Colors are in RGB code.<br>
+                2. No more than two colors are same.
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-3 col-sm-3">
-          <div class="thumbnail">
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-3">
-          <div class="thumbnail">
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-3">
-          <div class="thumbnail">
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-3">
-          <div class="thumbnail">
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-3">
-          <div class="thumbnail">
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-3">
-          <div class="thumbnail">
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-3">
-          <div class="thumbnail">
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-3">
-          <div class="thumbnail">
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-3">
-          <div class="thumbnail">
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-3">
-          <div class="thumbnail">
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-3">
-          <div class="thumbnail">
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-3">
-          <div class="thumbnail">
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-3">
-          <div class="thumbnail">
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-3">
-          <div class="thumbnail">
+        <!-- Developers Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModal"
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2 class="modal-title" id="exampleModalLongTitle">Developers
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button></h5>
+              </div>
+              <div class="modal-body" id ="devi">
+                <br>
+               <div>
+                <div class = "col-sm-4"> <a href = "https://github.com/i-vishi" class = "dev"><img class = "pics" src="assets/photos/vishal.jpg" ></a></div>
+                <div class = "col-sm-4"><a href="https://github.com/antew7" class = "dev"><img class = "pics" src="assets/photos/ananya.jpg"></a> </div>
+                <div class = "col-sm-4">  <a href="https://github.com/ravivarshney01" class = "dev"><img class = "pics" src="assets/photos/ravi.jpg" ></a></div>
+              </div>
+             <div id = "deviName">
+               <br>
+               <br>
+                <div class = "col-sm-4"> <a href = "https://github.com/i-vishi" class = "dev">Vishal Gaur</a></div>
+                <div class = "col-sm-4"><a href="https://github.com/antew7" class = "dev">Ananya Tewari</a> </div>
+                <div class = "col-sm-4">  <a href="https://github.com/ravivarshney01" class = "dev">Ravi Varshney</a></div>
+                <br>
+              </div>
+              <div id = "love">Made With &#10084; By <a href = "https://github.com/VAR-solutions">VAR Solutions</a></div>
+            </div>
+            </div>
           </div>
         </div>
       </div>
-      <!-- How to play?  Modal -->
-      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h2 class="modal-title" id="exampleModalLongTitle">How to play?
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button></h5>
-            </div>
-            <div class="modal-body">
-              <br>
-              1. Click on a tile to reveal its color.<br>
-              2. Guess the tile with same color.<br>
-              a. If right, marks increase by 25.<br>
-              b. If wrong, marks decrease by 5.<br>
-              3. The game is played till all colors are revealed.<br>
-              <br>
-              <br>
-              Note: 1. Colors are in RGB code.<br>
-              2. No more than two colors are same.
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
+      <!-- Congratulations Modal -->
+      <div class="modal modal--congratulations" id="congrat" aria-hidden="true" role="dialog">
+        <div class="modal-top">
+          <img class="modal-icon u-imgResponsive" src="https://dl.dropboxusercontent.com/s/e1t2hhowjcrs7f5/100daysui_100icon.png"
+            alt="Trophy" />
+          <div class="modal-header">Congratulations</div>
+          <div class="modal-subheader">You have successfully completed the Game
+            <br>Your Score is: <span id="final">234</span>
           </div>
         </div>
-      </div>
-      <!-- Developers Modal -->
-      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModal"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h2 class="modal-title" id="exampleModalLongTitle">Developers
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button></h5>
-            </div>
-            <div class="modal-body" id ="devi">
-              <br>
-             <div>
-              <div class = "col-sm-4"> <a href = "https://github.com/i-vishi" class = "dev"><img class = "pics" src="assets/photos/vishal.jpg" ></a></div>
-              <div class = "col-sm-4"><a href="https://github.com/antew7" class = "dev"><img class = "pics" src="assets/photos/ananya.jpg"></a> </div>
-              <div class = "col-sm-4">  <a href="https://github.com/ravivarshney01" class = "dev"><img class = "pics" src="assets/photos/ravi.jpg" ></a></div>
-            </div>
-           <div id = "deviName">
-             <br>
-             <br>
-              <div class = "col-sm-4"> <a href = "https://github.com/i-vishi" class = "dev">Vishal Gaur</a></div>
-              <div class = "col-sm-4"><a href="https://github.com/antew7" class = "dev">Ananya Tewari</a> </div>
-              <div class = "col-sm-4">  <a href="https://github.com/ravivarshney01" class = "dev">Ravi Varshney</a></div>
-              <br>
-            </div>
-            <div id = "love">Made With &#10084; By <a href = "https://github.com/VAR-solutions">VAR Solutions</a></div>
-          </div>
+        <div class="modal-bottom">
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" onclick="init()" data-dismiss="modal">Play Again</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
     </div>
-    <!-- Congratulations Modal -->
-    <div class="modal modal--congratulations" id="congrat" aria-hidden="true" role="dialog">
-      <div class="modal-top">
-        <img class="modal-icon u-imgResponsive" src="https://dl.dropboxusercontent.com/s/e1t2hhowjcrs7f5/100daysui_100icon.png"
-          alt="Trophy" />
-        <div class="modal-header">Congratulations</div>
-        <div class="modal-subheader">You have successfully completed the Game
-          <br>Your Score is: <span id="final">234</span>
-        </div>
-      </div>
-      <div class="modal-bottom">
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" onclick="init()" data-dismiss="modal">Play Again</button>
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
+    <!-- Right Side-bar -->
+    <div class="navbar navbar-inverse right-nav">
+      <p class="score-board">Score <span class="mobile-hidden">Board</span></p>
+      <br class="mobile-hidden">
+      <br class="mobile-hidden">
+      <p class="score-container"><span id="score">000</span></p>
+      <br class="mobile-hidden">
+      <br class="mobile-hidden">
+      <button class="button" onclick="init()"><span>Reset</span></a></button>
+      <ul class="nav navbar-nav navbar-fixed-bottom mobile-hidden">
+        <li id = "sidelove">Made With &#10084; By VAR Solutions</li>
+      </ul>
     </div>
   </div>
-    <script type="text/javascript" src="assets/js/lib/jquery-3.3.1.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-      crossorigin="anonymous"></script>
-    <script type="text/javascript" src="assets/js/matches.js"></script>
+  <script type="text/javascript" src="assets/js/lib/jquery-3.3.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="assets/js/matches.js"></script>
 </body>
 
 </html>
