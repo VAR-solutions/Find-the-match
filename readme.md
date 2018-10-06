@@ -9,7 +9,7 @@ The game comprises of a 4 x 4 matrix that have some color. There will be pairs o
 ### How to play?
 
 1. Click on a tile to reveal its color
-2. Guess the tile with same color, if right, marks increase by 25, else decrease by 25.
+2. Guess the tile with same color, if right, marks increase by 25, else decrease by 5.
 3. The game is played until all of the colors behind the tiles are revealed or the score becomes negative.
 
 ### Quick Notes
