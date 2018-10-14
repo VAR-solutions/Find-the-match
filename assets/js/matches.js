@@ -5,6 +5,7 @@ var colors = [];
 var tiles = document.querySelectorAll(".thumbnail");
 var scoreDisplay = document.querySelector("#score");
 var finScore = document.querySelector("#final");
+var selectedBorderStyle = "1px solid black"
 
 tiles.forEach(function (i) {
 	i.style.background = "black";
@@ -21,7 +22,7 @@ function driver() {
 		tiles[i].addEventListener("click", function () {
 			var clickedcolor = this.style.background;
 			if (this.style.border === "") {
-				this.style.border = "2px solid black";
+				this.style.border = selectedBorderStyle;
 			}
 			if (clickedcolor === "black") {
 				count += 1;
@@ -71,7 +72,7 @@ function driver() {
 
 function ind() {
 	for (i = 0; i < 16; i++) {
-		if (tiles[i].style.border === "2px solid black" & tiles[i].blur != "2") {
+		if (tiles[i].style.border === selectedBorderStyle & tiles[i].blur != "2") {
 			tiles[i].blur = "2";
 			return i;
 		}
@@ -80,7 +81,7 @@ function ind() {
 
 function col() {
 	for (var i = 0; i < 16; i++) {
-		if (tiles[i].style.border === "2px solid black" && tiles[i].style.zIndex != "1") {
+		if (tiles[i].style.border === selectedBorderStyle && tiles[i].style.zIndex != "1") {
 			tiles[i].style.zIndex = "1";
 			return colors[i];
 		}
