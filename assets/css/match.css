@@ -22,6 +22,7 @@ ul {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+  height: 250px;
 }
 
 .dev-profile-container {
@@ -222,10 +223,11 @@ a:visited{
   opacity: 1;
   right: 0;
 }
-.pics{
-          width: 120px;
-					height: 120px;
-					border-radius: 50%;
+.pics {
+  width: 120px;
+	height: 120px;
+	border-radius: 50%;
+  margin: auto;
 }
 #sidelove{
 	color: white;
@@ -235,9 +237,6 @@ a:visited{
 	margin: 0;
 	letter-spacing: 2px;
 	font-weight: 500;
-}
-#devi{
-	height: 250px;
 }
 #deviName{
 	padding-left: 15px;
@@ -252,15 +251,15 @@ a:visited{
 #deviName a:visited{
  color: black;
 }
-#love{
+.love{
 	padding-top: 15px;
-text-align: center;
+  text-align: center;
 }
-#love a:link{
+.love a:link{
 	color: black;
 
 }
-#love a:visited{
+.love a:visited{
 	color: black;
 }
 #congoBut{
@@ -518,11 +517,11 @@ $btn-shadow--success: rgba(0,208,0,0.5);
 		padding: 0 15px;
 	}
 
-	#devi {
-		height: auto;
-	}
-
 	.dev-profile-container {
 		flex-direction: column;
 	}
+
+  .dev-modal {
+    height: auto;
+  }
 }

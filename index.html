@@ -14,15 +14,16 @@
   <div class="modal-overlay"></div>
   <div>
     <!-- How to play?  Modal -->
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-      aria-hidden="true">
+    <div class="modal" id="howToPlayModal" tabindex="-1" role="dialog">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h2 class="modal-title" id="exampleModalLongTitle">How to play?
+            <h2 class="modal-title">
+              How to play?
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
-              </button></h5>
+              </button>
+            </h2>
           </div>
           <div class="modal-body">
             <ol type="1">
@@ -37,64 +38,66 @@
             <br>
             <br>
             Note :
-            <ul type="disc">              
+            <ul type="disc">
               <li>Colors are in RGB code.</li>
               <li>No more than two colors are same.</li>
             </ul>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary center" data-dismiss="modal">Close</button>
+            <button type="button" class="btn" data-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
     </div>
     <!-- Developers Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModal"
-      aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal" id="developersModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h2 class="modal-title" id="exampleModalLongTitle">Developers
+            <h2 class="modal-title">
+              Developers
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
-              </button></h5>
+              </button>
+            </h2>
           </div>
-          <div class="modal-body dev-modal" id ="devi">
+          <div class="modal-body dev-modal">
            <div class="dev-profile-container">
-             <div class="dev-profile">
-               <a href = "https://github.com/i-vishi" class="dev"><img class = "pics" src="assets/photos/vishal.jpg" ></a>
-               <a href = "https://github.com/i-vishi" class="dev">Vishal Gaur</a>
-             </div>
-             <div class="dev-profile">
-               <a href="https://github.com/antew7" class = "dev"><img class = "pics" src="assets/photos/ananya.jpg"></a>
-               <a href="https://github.com/antew7" class = "dev">Ananya Tewari</a>
-             </div>
-             <div class="dev-profile">
-               <a href="https://github.com/ravivarshney01" class = "dev"><img class = "pics" src="assets/photos/ravi.jpg" ></a>
-               <a href="https://github.com/ravivarshney01" class = "dev">Ravi Varshney</a>
-             </div>
+             <a class="dev-profile" href="https://github.com/i-vishi">
+               <img class="pics" src="assets/photos/vishal.jpg" />
+               <span>Vishal Gaur</span>
+             </a>
+             <a class="dev-profile" href="https://github.com/antew7">
+               <img class="pics" src="assets/photos/ananya.jpg" />
+               <span>Ananya Tewari</span>
+             </a>
+             <a class="dev-profile" href="https://github.com/ravivarshney01">
+               <img class="pics" src="assets/photos/ravi.jpg" />
+               <span>Ravi Varshney</span>
+             </a>
           </div>
-          <div id = "love">Made With &#10084; By <a href = "https://github.com/VAR-solutions">VAR Solutions</a></div>
+          <div class="love">
+            Made With &#10084; By <a href="https://github.com/VAR-solutions">VAR Solutions</a>
+          </div>
         </div>
         </div>
       </div>
     </div>
     <!-- Congratulations Modal -->
-    <div class="modal fade" id="congrat" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-      aria-hidden="true" >
-      <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal" id="congrat" tabindex="-1" role="dialog" aria-hidden="true" >
+      <div class="modal-dialog" role="document">
         <div class="modal-top">
-          <img class="modal-icon u-imgResponsive" src="https://dl.dropboxusercontent.com/s/e1t2hhowjcrs7f5/100daysui_100icon.png"
-            alt="Trophy" />
+          <img class="modal-icon u-imgResponsive" src="https://dl.dropboxusercontent.com/s/e1t2hhowjcrs7f5/100daysui_100icon.png" alt="Trophy" />
           <div class="modal-header">Congratulations</div>
-          <div class="modal-subheader">You have successfully completed the Game
+          <div class="modal-subheader">
+            You have successfully completed the Game
             <br>Your Score is: <span id="final">234</span>
           </div>
         </div>
         <div class="modal-bottom">
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" onclick="init()" data-dismiss="modal">Play Again</button>
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn" onclick="init()" data-dismiss="modal">Play Again</button>
+            <button type="button" class="btn" data-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
@@ -105,8 +108,8 @@
     <div class="navbar left-nav">
       <a class="navbar-brand" href="#">Find The Match</a>
       <ul class="right-nav-links">
-        <li class="nav-li"><a href="#" data-toggle="modal" data-target="#exampleModalCenter">How to play?</a></li>
-        <li class="nav-li"><a  href="#" data-toggle="modal" data-target="#exampleModal">Developers</a></li>
+        <li class="nav-li"><a href="#" data-toggle="modal" data-target="#howToPlayModal">How to play?</a></li>
+        <li class="nav-li"><a  href="#" data-toggle="modal" data-target="#developersModal">Developers</a></li>
         <br>
       </ul>
     </div>
