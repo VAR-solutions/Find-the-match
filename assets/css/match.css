@@ -125,14 +125,14 @@ ul {
 	width: 100%;
 }
 
-#score {
+.score-display {
 	font-size: 100px;
 	font-weight: 800;
 	color: #bdbdbd;
 	letter-spacing: 4px;
 }
 
-.navbar-brand {
+.title {
 	display: block;
 	text-transform: uppercase;
 	letter-spacing: 2px;
@@ -141,6 +141,7 @@ ul {
 	font-size: 30px;
 	font-weight: 700;
 	padding: 15px;
+  margin: 0;
 }
 
 .left-nav .navbar-nav > li {
@@ -163,6 +164,18 @@ ul {
   padding-right: 160px;
 }
 
+.sublist {
+  display: block;
+}
+
+.numbered-list {
+  list-style-type: decimal;
+}
+
+.alpha-list {
+  list-style-type: lower-alpha;
+}
+
 .game-grid {
 	display: flex;
 	flex-wrap: wrap;
@@ -176,14 +189,12 @@ ul {
 	text-decoration: none;
 }
 
-a:link{
-	text-decoration: none;
-	color: #9d9d9d;
+a:link, a:visited, .title {
+  color: #9d9d9d;
 }
 
-a:visited{
+a:link, a:visited {
 	text-decoration: none;
-	color: #9d9d9d;
 }
 
 .button {
@@ -199,14 +210,14 @@ a:visited{
   margin: 5px;
 }
 
-.button span {
+.button-text {
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
 }
 
-.button span:after {
+.button-text:after {
   content: '\00bb';
   position: absolute;
   opacity: 0;
@@ -215,11 +226,11 @@ a:visited{
   transition: 0.5s;
 }
 
-.button:hover span {
+.button:hover .button-text {
   padding-right: 20px;
 }
 
-.button:hover span:after {
+.button:hover .button-text:after {
   opacity: 1;
   right: 0;
 }
@@ -229,7 +240,7 @@ a:visited{
 	border-radius: 50%;
   margin: auto;
 }
-#sidelove{
+.sidelove{
 	color: white;
 	padding-top: 15px;
 	font-size: 10px;
@@ -444,6 +455,10 @@ $btn-shadow--success: rgba(0,208,0,0.5);
     text-decoration: none;
 }
 
+.right-nav-links {
+  padding-bottom: 20px;
+}
+
 @media screen and (max-width: 1000px) {
 	.app-container {
 		display: flex;
@@ -483,7 +498,7 @@ $btn-shadow--success: rgba(0,208,0,0.5);
 		margin-bottom: 0;
 	}
 
-	#score {
+	.score-display {
 		font-size: 80px;
 	}
 

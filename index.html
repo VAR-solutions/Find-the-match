@@ -26,19 +26,21 @@
             </h2>
           </div>
           <div class="modal-body">
-            <ol type="1">
+            <ol class="numbered-list">
               <li>Click on a tile to reveal its color.</li>
               <li>Guess the tile with same color.</li>
-              <ol type="a">
-                <li>If right, marks increase by 25.</li>
-                <li>If wrong, marks decrease by 5.</li>
-              </ol>
+              <li class="sublist">
+                <ol class="alpha-list">
+                  <li>If right, marks increase by 25.</li>
+                  <li>If wrong, marks decrease by 5.</li>
+                </ol>
+              </li>
               <li>The game is played till all colors are revealed.</li>
             </ol>
             <br>
             <br>
             Note :
-            <ul type="disc">
+            <ul>
               <li>Colors are in RGB code.</li>
               <li>No more than two colors are same.</li>
             </ul>
@@ -64,15 +66,15 @@
           <div class="modal-body dev-modal">
            <div class="dev-profile-container">
              <a class="dev-profile" href="https://github.com/i-vishi">
-               <img class="pics" src="assets/photos/vishal.jpg" />
+               <img class="pics" alt="Portrait photo of Vishal Gaur" src="assets/photos/vishal.jpg" />
                <span>Vishal Gaur</span>
              </a>
              <a class="dev-profile" href="https://github.com/antew7">
-               <img class="pics" src="assets/photos/ananya.jpg" />
+               <img class="pics" alt="Portrait photo of Ananya Tewari" src="assets/photos/ananya.jpg" />
                <span>Ananya Tewari</span>
              </a>
              <a class="dev-profile" href="https://github.com/ravivarshney01">
-               <img class="pics" src="assets/photos/ravi.jpg" />
+               <img class="pics" alt="Portrait photo of Ravi Varshney" src="assets/photos/ravi.jpg" />
                <span>Ravi Varshney</span>
              </a>
           </div>
@@ -106,79 +108,62 @@
   <div class="app-container">
     <!-- Left Side-bar -->
     <div class="navbar left-nav">
-      <a class="navbar-brand" href="#">Find The Match</a>
+      <h1 class="title">Find The Match</h1>
       <ul class="right-nav-links">
         <li class="nav-li"><a href="#" data-toggle="modal" data-target="#howToPlayModal">How to play?</a></li>
-        <li class="nav-li"><a  href="#" data-toggle="modal" data-target="#developersModal">Developers</a></li>
-        <br>
+        <li class="nav-li"><a href="#" data-toggle="modal" data-target="#developersModal">Developers</a></li>
       </ul>
     </div>
     <!-- Body of Game -->
     <div class="container">
-        <div class="game-grid">
-          <div class="game-tile">
-            <div class="thumbnail">
-            </div>
-          </div>
-          <div class="game-tile">
-            <div class="thumbnail">
-            </div>
-          </div>
-          <div class="game-tile">
-            <div class="thumbnail">
-            </div>
-          </div>
-          <div class="game-tile">
-            <div class="thumbnail">
-            </div>
-          </div>
-          <div class="game-tile">
-            <div class="thumbnail">
-            </div>
-          </div>
-          <div class="game-tile">
-            <div class="thumbnail">
-            </div>
-          </div>
-          <div class="game-tile">
-            <div class="thumbnail">
-            </div>
-          </div>
-          <div class="game-tile">
-            <div class="thumbnail">
-            </div>
-          </div>
-          <div class="game-tile">
-            <div class="thumbnail">
-            </div>
-          </div>
-          <div class="game-tile">
-            <div class="thumbnail">
-            </div>
-          </div>
-          <div class="game-tile">
-            <div class="thumbnail">
-            </div>
-          </div>
-          <div class="game-tile">
-            <div class="thumbnail">
-            </div>
-          </div>
-          <div class="game-tile">
-            <div class="thumbnail">
-            </div>
-          </div>
-          <div class="game-tile">
-            <div class="thumbnail">
-            </div>
-          </div>
-          <div class="game-tile">
-            <div class="thumbnail">
-            </div>
-          </div>
-          <div class="game-tile">
-            <div class="thumbnail">
-          </div>
+      <div class="game-grid">
+        <div class="game-tile">
+          <div class="thumbnail"></div>
+        </div>
+        <div class="game-tile">
+          <div class="thumbnail"></div>
+        </div>
+        <div class="game-tile">
+          <div class="thumbnail"></div>
+        </div>
+        <div class="game-tile">
+          <div class="thumbnail"></div>
+        </div>
+        <div class="game-tile">
+          <div class="thumbnail"></div>
+        </div>
+        <div class="game-tile">
+          <div class="thumbnail"></div>
+        </div>
+        <div class="game-tile">
+          <div class="thumbnail"></div>
+        </div>
+        <div class="game-tile">
+          <div class="thumbnail"></div>
+        </div>
+        <div class="game-tile">
+          <div class="thumbnail"></div>
+        </div>
+        <div class="game-tile">
+          <div class="thumbnail"></div>
+        </div>
+        <div class="game-tile">
+          <div class="thumbnail"></div>
+        </div>
+        <div class="game-tile">
+          <div class="thumbnail"></div>
+        </div>
+        <div class="game-tile">
+          <div class="thumbnail"></div>
+        </div>
+        <div class="game-tile">
+          <div class="thumbnail"></div>
+        </div>
+        <div class="game-tile">
+          <div class="thumbnail"></div>
+        </div>
+        <div class="game-tile">
+          <div class="thumbnail"></div>
         </div>
       </div>
     </div>
@@ -189,17 +174,17 @@
       </p>
       <div>
         <p class="score-container">
-          <span id="score">000</span>
+          <span class="score-display" id="score">000</span>
         </p>
-        <button class="button" onclick="init()"><span>Reset</span></a></button>
+        <button class="button" onclick="init()"><span class="button-text">Reset</span></button>
       </div>
-      <p id="sidelove" class="mobile-hidden">Made With &#10084; By VAR Solutions</p>
+      <p class="sidelove mobile-hidden">Made With &#10084; By VAR Solutions</p>
     </div>
   </div>
-  <script type="text/javascript" src="assets/js/lib/jquery-3.3.1.min.js"></script>
+  <script src="assets/js/lib/jquery-3.3.1.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
     crossorigin="anonymous"></script>
-  <script type="text/javascript" src="assets/js/matches.js"></script>
+  <script src="assets/js/matches.js"></script>
 </body>
 
 </html>
