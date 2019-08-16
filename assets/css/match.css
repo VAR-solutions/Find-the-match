@@ -99,7 +99,6 @@ ul {
 }
 
 .thumbnail{
-	padding-bottom: auto;
 	height: 90px;
 	width: 100%;
 	border: 1px solid #ddd;
@@ -144,26 +143,6 @@ ul {
   margin: 0;
 }
 
-.left-nav .navbar-nav > li {
-  float: none;  /* Cancel default li float: left */
-  width: 175px;
-	font-size: 20px;
-	font-weight: 500;
-	letter-spacing: 2px;
-}
-
-.right-nav .navbar-nav > li {
-  float: none;  /* Cancel default li float: left */
-  width: 350px;
-	font-size: 20px;
-	font-weight: 500;
-	letter-spacing: 2px;
-}
-
-.right-nav + .container {
-  padding-right: 160px;
-}
-
 .sublist {
   display: block;
 }
@@ -181,12 +160,6 @@ ul {
 	flex-wrap: wrap;
 	width: 100%;
 	justify-content: space-evenly;
-}
-
-
-
-#areset{
-	text-decoration: none;
 }
 
 a:link, a:visited, .title {
@@ -234,12 +207,14 @@ a:link, a:visited {
   opacity: 1;
   right: 0;
 }
+
 .pics {
   width: 120px;
 	height: 120px;
 	border-radius: 50%;
   margin: auto;
 }
+
 .sidelove{
 	color: white;
 	padding-top: 15px;
@@ -249,75 +224,18 @@ a:link, a:visited {
 	letter-spacing: 2px;
 	font-weight: 500;
 }
-#deviName{
-	padding-left: 15px;
-	padding-top: 100px;
 
-}
-
-#deviName a:link{
-	color: black;
-
-}
-#deviName a:visited{
- color: black;
-}
 .love{
 	padding-top: 15px;
   text-align: center;
 }
+
 .love a:link{
 	color: black;
-
 }
+
 .love a:visited{
 	color: black;
-}
-#congoBut{
-	text-align: center;
-}
-#congClose{
-	float:right;
-}
-
-
-
-// Mixins/Vars
-// ======================
-$btn-color--primary: rgba(41, 118, 223, 1);
-$btn-shadow: rgba(41, 118, 223, 0.5);
-$btn-shine: linear-gradient(to top, rgba(255,255,255,0) 0%, rgba(250,198,100,.27) 100%);
-$btn-color--success: rgba(0,208,0,1);
-$btn-shadow--success: rgba(0,208,0,0.5);
-
-@mixin btn-shadow($color) {
-    box-shadow: 0 15px 40px 0 $color;
-}
-
-/* Helpers
-====================== */
-.u-imgResponsive {
-    max-width: 100%;
-}
-.u-btn {
-    flex: 0 0 100%;
-    padding: 14px 20px;
-    border: 0;
-    background: $btn-shine, $btn-color--primary;
-    border-radius: 25px;
-    color: #fff;
-    font-size: 18px;
-    letter-spacing: 1px;
-    transition: all .2s ease;
-    @include btn-shadow($btn-shadow);
-
-    &:hover {
-        opacity: 0.9;
-    }
-    &.u-btn--success {
-        background: $btn-color--success;
-        @include btn-shadow($btn-shadow--success);
-    }
 }
 
 /* Modal
@@ -372,6 +290,7 @@ $btn-shadow--success: rgba(0,208,0,0.5);
     display: block;
     max-width: 207px;
     margin: 0 auto 65px;
+    max-width: 100%;
 }
 .modal-header {
     margin-bottom: 10px;
@@ -409,9 +328,12 @@ $btn-shadow--success: rgba(0,208,0,0.5);
     border-bottom-right-radius: 10px;
     background: #fff;
 }
-.modal-btn {
-    margin: 60px auto;
+@media (min-width: 456px) {
+    .modal-bottom {
+        padding: 20px;
+    }
 }
+
 .btn {
 	display: inline-block;
   padding: 6px 12px;
@@ -433,25 +355,8 @@ $btn-shadow--success: rgba(0,208,0,0.5);
   border: 1px solid transparent;
   border-radius: 4px;
 }
-@media (min-width: 456px) {
 
-    .modal-bottom {
-        padding: 20px auto;
-    }
-    .modal-btn {
-        flex: 1;
-        margin: 0;
-        max-width: 190px;
-
-        &:nth-of-type(2) {
-            margin-left: 30px;
-        }
-    }
-}
-.dev:link{
-    text-decoration: none;
-}
-.dev:hover{
+.dev:link, .dev:hover {
     text-decoration: none;
 }
 
