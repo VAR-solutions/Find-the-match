@@ -22,4 +22,4 @@ The game comprises of a 4 x 4 matrix which contains some colors. There will be p
 * **For the wonderful idea:** [Ananya Tewari](https://github.com/antew7) :tada:
 * **Meet the team:** [Vishal](https://github.com/i-vishi), [Ananya](https://github.com/antew7), [Ravi](https://github.com/ravivarshney01) :+1:
 
-### You're ready? Play the [game!](https://bit.ly/2OThE6Y)
+### You're ready? Play the [game!](https://bit.ly/2ZqegXv)
